@@ -91,10 +91,10 @@
                     </el-popover>
                     <el-popover placement="bottom" style="margin-left: 10px">
                       <el-row>
-                        <el-checkbox v-model="form.tpl.surge.doh" label="Surge.DoH"></el-checkbox>
+                        <el-checkbox v-model="form.tpl。surge。doh" label="Surge.DoH"></el-checkbox>
                       </el-row>
                       <el-row>
-                        <el-checkbox v-model="form.tpl.clash.doh" label="Clash.DoH"></el-checkbox>
+                        <el-checkbox v-model="form.tpl。clash。doh" label="Clash.DoH"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.insert" label="网易云"></el-checkbox>
@@ -132,7 +132,7 @@
 
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button style="width: 140px" type="danger" @click="makeUrl"
-                  :disabled="form.sourceSubUrl.length === 0">生成订阅链接</el-button>
+                  :disabled="form.sourceSubUrl。length === 0">生成订阅链接</el-button>
                 <el-button style="width: 140px" type="danger" @click="makeShortUrl" :loading="loading"
                   :disabled="customSubUrl.length === 0">生成短链接</el-button>
                 <!-- <el-button style="width: 140px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
@@ -165,7 +165,7 @@
       </div>
       <el-form label-position="left">
         <el-form-item prop="uploadConfig">
-          <el-input v-model="uploadConfig" type="textarea" :autosize="{ minRows: 15, maxRows: 30 }" maxlength="10000"
+          <el-input v-model="uploadConfig" type="textarea" :autosize="{ minRows: 15， maxRows: 30 }" maxlength="10000"
             show-word-limit></el-input>
         </el-form-item>
       </el-form>
@@ -195,73 +195,73 @@
 </template>
 
 <script>
-const project = process.env.VUE_APP_PROJECT
-const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG
-const subDocAdvanced = process.env.VUE_APP_SUBCONVERTER_DOC_ADVANCED
-const gayhubRelease = process.env.VUE_APP_BACKEND_RELEASE
-const defaultBackend = process.env.VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
-const shortUrlBackend = process.env.VUE_APP_MYURLS_API
-const configUploadBackend = process.env.VUE_APP_CONFIG_UPLOAD_API
-const tgBotLink = process.env.VUE_APP_BOT_LINK
+const project = process.env。VUE_APP_PROJECT
+const remoteConfigSample = process.env。VUE_APP_SUBCONVERTER_REMOTE_CONFIG
+const subDocAdvanced = process.env。VUE_APP_SUBCONVERTER_DOC_ADVANCED
+const gayhubRelease = process.env。VUE_APP_BACKEND_RELEASE
+const defaultBackend = process.env。VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
+const shortUrlBackend = process.env。VUE_APP_MYURLS_API
+const configUploadBackend = process.env。VUE_APP_CONFIG_UPLOAD_API
+const tgBotLink = process.env。VUE_APP_BOT_LINK
 
-export default {
+export 默认 {
   data() {
     return {
-      backendVersion: "",
-      advanced: "2",
+      backendVersion: ""，
+      advanced: "2"，
 
       // 是否为 PC 端
-      isPC: true,
+      isPC: true，
 
       options: {
         clientTypes: {
-          Clash: "clash",
-          Surge: "surge&ver=4",
-          Quantumult: "quan",
-          QuantumultX: "quanx",
-          Mellow: "mellow",
-          Surfboard: "surfboard",
-          Loon: "loon",
-          singbox: "singbox",
-          ss: "ss",
-          ssd: "ssd",
-          sssub: "sssub",
-          ssr: "ssr",
-          ClashR: "clashr",          
-          V2Ray: "v2ray",
-          Trojan: "trojan",
-          Surge3: "surge&ver=3",
-        },
-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+          Clash: "clash"，
+          Surge: "surge&ver=4"，
+          Quantumult: "quan"，
+          QuantumultX: "quanx"，
+          Mellow: "mellow"，
+          Surfboard: "surfboard"，
+          Loon: "loon"，
+          singbox: "singbox"，
+          ss: "ss"，
+          ssd: "ssd"，
+          sssub: "sssub"，
+          ssr: "ssr"，
+          ClashR: "clashr"，          
+          V2Ray: "v2ray"，
+          Trojan: "trojan"，
+          Surge3: "surge&ver=3"，
+        }，
+        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }]，
         remoteConfig: [
         {
-            label: "自建",
+            label: "自建"，
             options: [
               {
-                label: "自建版",
+                label: "自建模版"，
                 value:
                   "https://git.junjie123.top/https://github.com/wwpanni/clash222/blob/main/clash1.ini"
               }
        
             ]
-          },
+          }，
           {
-            label: "universal",
+            label: "universal"，
             options: [
               {
-                label: "No-Urltest",
+                label: "No-Urltest"，
                 value:
                   "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/no-urltest.ini"
-              },
+              }，
               {
-                label: "Urltest",
+                label: "Urltest"，
                 value:
                   "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/urltest.ini"
               }
             ]
-          },
+          }，
           {
-            label: "customized",
+            label: "customized"，
             options: [
               {
                 label: "Maying",
