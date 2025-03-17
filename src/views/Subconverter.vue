@@ -234,6 +234,17 @@ export default {
         },
         backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
         remoteConfig: [
+        {
+            label: "自建",
+            options: [
+              {
+                label: "自建版",
+                value:
+                  "https://git.junjie123.top/https://github.com/wwpanni/clash222/blob/main/clash1.ini"
+              }
+       
+            ]
+          },
           {
             label: "universal",
             options: [
