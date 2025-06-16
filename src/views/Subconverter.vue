@@ -240,7 +240,7 @@ export default {
               {
                 label: "自建模版",
                 value:
-                  "https://git.workgo.top/https://raw.githubusercontent.com/wwpanni/clashmuban/refs/heads/main/clash.ini"
+                  "https://git.jjgo.top/https://raw.githubusercontent.com/wwpanni/clashmuban/refs/heads/main/clash1.ini"
               }
        
             ]
