@@ -235,18 +235,14 @@ export default {
         backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
         remoteConfig: [
           {
-            label: "universal",
+            label: "自建",
             options: [
               {
-                label: "No-Urltest",
+                label: "自建",
                 value:
-                  "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/no-urltest.ini"
-              },
-              {
-                label: "Urltest",
-                value:
-                  "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/urltest.ini"
+                  "https://git.workgo.top/https://raw.githubusercontent.com/wwpanni/clashmuban/refs/heads/main/clash.ini"
               }
+              
             ]
           },
           {
